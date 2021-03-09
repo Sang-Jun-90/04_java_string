@@ -20,31 +20,8 @@ public class StringEx16_정답 {
 		String text = "Life is too short.";
 		System.out.println(text);
 		
-		String[] temp = text.split("");
 		
-		System.out.print("검색할 단어를 입력하세요 : ");
-		String word = scan.next();
 		
-		String[] tempword = word.split("");
-		
-		int cnt = -1;
-		int l = word.length();
-		
-		for (int i = 0; i < temp.length; i++) {
-			if (tempword[0].contentEquals(temp[i])) {
-				cnt = i;
-				break;
-			}
-		}
-		if (cnt == -1) {
-			System.out.println("없는뎁쇼");
-		}
-		else {
-			String textsub = text.substring(cnt, cnt + l);
-			
-			if (textsub.contentEquals(word)) System.out.println("일치");
-			else System.out.println("불일치");			
-		}
 
 	}
 

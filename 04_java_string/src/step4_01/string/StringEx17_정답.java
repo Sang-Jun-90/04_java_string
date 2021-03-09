@@ -28,18 +28,26 @@ public class StringEx17_정답 {
 		System.out.print("변경하고 싶은 단어를 입력하세요 : ");
 		String word = scan.nextLine();
 		
-		String[] temptext = text.split("");
-		String[] tempword = word.split("");
-		
 		int wordLength = word.length();
 		
-		int cnt = 0;
-		
-		for (int i = 0; i < temptext.length; i++) {
-			if (tempword[0].equals(temptext[i])) {
-				cnt = i;
+
+		for (int i = 0; i < text.length()-wordLength; i++) {
+
+			int cnt = 0;
+			for (int j = 0 ; j < wordLength; j++) {
+				
+				
+				
+			}
+			if (cnt == wordLength) {
+				System.out.print("넣을 단어를 입력하세요 : ");
+				String inputWord = scan.nextLine();
+				for (int k = 0; k < inputWord.length(); k++) {
+					
+				}
 				break;
 			}
+			
 		}
 		
 		
