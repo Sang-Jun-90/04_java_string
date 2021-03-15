@@ -11,6 +11,7 @@ package step4_01.string;
  *  
  * */
 
+
 public class StringEx19_테스트문제 {
 
 	public static void main(String[] args) {
@@ -29,7 +30,23 @@ public class StringEx19_테스트문제 {
 								{"1004" ,"45" ,"30" , "35"},
 							};
 
-		 
+		int top = 0;
+		String topStudent = "";
+		
+		for (int i = 0; i < scores.length; i++) {
+	
+			if (top < Integer.parseInt(scores[i][1]) + 
+					  Integer.parseInt(scores[i][2]) + 
+					  Integer.parseInt(scores[i][3])) {
+				top = Integer.parseInt(scores[i][1]) + 
+					  Integer.parseInt(scores[i][2]) + 
+					  Integer.parseInt(scores[i][3]);
+				topStudent = students[i][0];
+			}
+			
+		}
+		System.out.println(topStudent);
+		
 
 	}
 

@@ -1,5 +1,6 @@
 package step4_01.string;
 
+import java.util.Arrays;
 
 /*
  * 
@@ -38,6 +39,17 @@ public class StringEx20_테스트문제 {
 				{"1003" ,"영어","30"},
 				{"1004" ,"영어","70"}
 		};		
+		
+		int size = students.length;
+		int[] reScore = new int[size];
+		
+		for (int i = 0; i < score.length; i++) {
+			if (students[i][2].equals(score[i][0])) {
+				int location = Integer.parseInt(students[i][2]) % 1001;
+				reScore[location] += Integer.parseInt(score[i][2]);
+			}
+		}
+		System.out.println(Arrays.toString(reScore));
 		
 	}
 
