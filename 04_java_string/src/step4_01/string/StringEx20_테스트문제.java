@@ -43,13 +43,26 @@ public class StringEx20_테스트문제 {
 		int size = students.length;
 		int[] reScore = new int[size];
 		
-		for (int i = 0; i < score.length; i++) {
-			if (students[i][2].equals(score[i][0])) {
-				int location = Integer.parseInt(students[i][2]) % 1001;
-				reScore[location] += Integer.parseInt(score[i][2]);
+		for (int i = 1; i < score.length; i++) {	
+			for (int j = 0; j < 4; j++) {		
+				if (students[j][2].equals(score[i][0])) {
+					int location = Integer.parseInt(score[i][0]) % 1001;
+					reScore[location] += Integer.parseInt(score[i][2]);
+				}		
 			}
 		}
-		System.out.println(Arrays.toString(reScore));
+		int maxScore = 0;;
+		String maxName = "";
+		
+		for (int i = 0; i < reScore.length; i++) {
+			if (maxScore < reScore[i]) {
+				maxScore = reScore[i];
+				maxName = students[i][0];
+			}
+		}
+		
+		System.out.println(maxName + " : " + maxScore + "점");
+		
 		
 	}
 

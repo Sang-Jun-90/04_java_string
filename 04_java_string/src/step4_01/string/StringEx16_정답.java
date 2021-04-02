@@ -20,8 +20,34 @@ public class StringEx16_정답 {
 		String text = "Life is too short.";
 		System.out.println(text);
 		
+		char[] textChar = new char[text.length()];
 		
+		for (int i = 0; i < textChar.length; i++) {
+			textChar[i] = text.charAt(i);
+		}
 		
+		System.out.println(Arrays.toString(textChar));
+		
+		System.out.print("입력 : ");
+		String input = scan.next();
+		
+		int inputL = input.length();
+		boolean isSame = false;
+		
+		for (int i = 0; i < textChar.length-inputL+1; i++) {
+			int correctCnt = 0;
+			for (int j = 0; j < inputL; j++) {
+				if (textChar[i+j] == input.charAt(j)) {
+					correctCnt += 1;
+				}
+			}
+			if(correctCnt == inputL) isSame = true;
+		}
+		
+		// 공부다시해보기 
+		
+		if (isSame == true) System.out.println("wjdekq");
+		else if (isSame == false) System.out.println("false");
 
 	}
 

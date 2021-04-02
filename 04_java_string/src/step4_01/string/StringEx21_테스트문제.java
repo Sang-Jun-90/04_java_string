@@ -1,5 +1,7 @@
 package step4_01.string;
 
+import java.util.Arrays;
+import java.util.Iterator;
 
 //문제) moneyData 와 nameData 를 조합해서 userData를 아래와같이 만들어보세요
 
@@ -46,9 +48,23 @@ public class StringEx21_테스트문제 {
 
 		String userData = "";
 		
+		String[] temp = nameData.split("\n");
+		String[] temp2 = moneyData.split("\n");
+		String[] name = new String[temp2.length];
 		
+		for (int i = 0; i < temp2.length; i++) {
+			String[] temp3 = temp2[i].split("/");
+			for (int j = 0; j < temp.length; j++) {
+				String[] temp4 = temp[j].split("/");
+				if(temp3[0].equals(temp4[0])) {		
+					name[i] = temp4[1];
+				}
+				
+			}
+			temp2[i] = temp3[0] + "/" + name[i] + "/" + temp3[1];
+			System.out.println(temp2[i]);
+		}
 		
-
 		
 
 	}

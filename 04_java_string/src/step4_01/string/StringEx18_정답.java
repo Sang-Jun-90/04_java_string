@@ -19,6 +19,7 @@ public class StringEx18_정답 {
 		
 		Scanner scan = new Scanner(System.in);
 		Random ran = new Random();
+		
 		int score = 100;
 		String word = "performance";
 		String meaning = "공연";
@@ -26,7 +27,6 @@ public class StringEx18_정답 {
 		int[] check = new int[size];  // 힌트 체크를 통해서 확인할수있다.
 		
 		while (true) {
-			
 			System.out.println("뜻 : " + meaning);
 			System.out.print("문제 : ");
 			for (int i =0; i< size; i++) {
@@ -52,22 +52,17 @@ public class StringEx18_정답 {
 					int r = ran.nextInt(size);
 					if (check[r] == 0) {
 						check[r] = 1;
-						
 						for (int i = 0; i < check.length; i++) {
 							if (word.charAt(i) == word.charAt(r)) check[i] =1;
 						}
-						
 						break;
 					}
 				}
-				
-				
-				
 			}
-			
-			
 		}
 
+		
+		
 	}
 
 }

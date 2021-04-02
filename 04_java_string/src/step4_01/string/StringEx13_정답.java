@@ -14,26 +14,17 @@ public class StringEx13_정답 {
 		int cnt = 0;
 		
 		while (cnt < 5) {
-			
-//			String max = "";
-//			int maxNum = 0;
 			String temp = "";
 			
-			for (int i = cnt ; i < names.length-1; i++) {
+			for (int i = cnt ; i < names.length; i++) {
+				if(i+1 >= names.length) continue;
 				if (names[i].compareTo(names[i+1]) > 0) {
-					
 					temp = names[i];
 					names[i] = names[i+1];
 					names[i+1] = temp;
-					
-					temp = "";
 				}
 			}
-			
-
-			
 			cnt++;
-			
 		}
 		
 		System.out.println(Arrays.toString(names));

@@ -35,7 +35,7 @@ public class StringEx06_정답 {
 		
 		for (int i = 0; i < scores.length; i++) {
 			text += scores[i] + "";
-			if(i+1 !=  scores.length) text += "/";
+			if(i !=  scores.length-1) text += "/";
 		}
 		
 		System.out.println(text);
